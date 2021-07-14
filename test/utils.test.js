@@ -20,5 +20,17 @@ describe('Utils', () => {
             expect(acharCaracter(-4, 'abcde', 'c'))
                 .toBe('comprimento invalido');
         });
-    });    
+    });
+    describe('acharCaracter', () => {
+        test('comprimento diferente do comprimento da cadeia', () => {
+            expect(acharCaracter(4, 'abcde', 'c'))
+                .toBe('comprimento fornecido diferente do comprimento real');
+        });
+    });
+    describe('acharCaracter', () => {
+        test('achar letra c em utilizacao valida do metodo', () => {
+            expect(acharCaracter(5, 'abcde', 'c'))
+                .toBe(2);
+        });
+    });
 });
