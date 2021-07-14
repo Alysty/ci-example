@@ -8,10 +8,17 @@ describe('Utils', () => {
         });
     });
 
+    describe('gerarNumeroAleatorio', () => {
+        test('inicio nao pode ser negativo', () => {
+            expect(gerarNumeroAleatorio(-5, 10))
+                .toBe(-1);
+        });
+    });
+
     describe('acharCaracter', () => {
         test('comprimento invalido', () => {
             expect(acharCaracter(-4, 'abcde', 'c'))
                 .toBe('comprimento invalido');
         });
     });    
-});//
+});
